@@ -124,7 +124,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 2026.4.15.1053
+  bundleVersion: 2026.4.15.1397
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
@@ -303,6 +303,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 0
@@ -799,7 +801,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: POST_PROCESSING_STACK_V2;UNITY_POST_PROCESSING_STACK_V2;STEAMWORKS_NET
+    1: POST_PROCESSING_STACK_V2
     2: CROSS_PLATFORM_INPUT
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;UNITY_POST_PROCESSING_STACK_V2
     7: POST_PROCESSING_STACK_V2;DISABLESTEAMWORKS;UNITY_POST_PROCESSING_STACK_V2
@@ -850,6 +852,28 @@ PlayerSettings:
     Standalone: 3
   m_RenderingPath: 3
   m_MobileRenderingPath: 1
+  metroPackageName: Renderite.Unity.Renderer
+  metroPackageVersion: 
+  metroCertificatePath: 
+  metroCertificatePassword: 
+  metroCertificateSubject: 
+  metroCertificateIssuer: 
+  metroCertificateNotAfter: 0000000000000000
+  metroApplicationDescription: Renderite.Unity.Renderer
+  wsaImages: {}
+  metroTileShortName: 
+  metroTileShowName: 0
+  metroMediumTileShowName: 0
+  metroLargeTileShowName: 0
+  metroWideTileShowName: 0
+  metroSupportStreamingInstall: 0
+  metroLastRequiredScene: 0
+  metroDefaultTileSize: 1
+  metroTileForegroundText: 2
+  metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
+  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
+    a: 1}
+  metroSplashScreenUseBackgroundColor: 0
   platformCapabilities:
     WindowsStoreApps:
       AllJoyn: False
