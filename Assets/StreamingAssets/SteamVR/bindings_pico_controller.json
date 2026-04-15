@@ -1,0 +1,192 @@
+{
+  "bindings": {
+    "/actions/generic": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        }
+      ],
+      "skeleton": []
+    },
+    "/actions/piconeo": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/piconeo/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/piconeo/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/piconeo/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/piconeo/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/piconeo/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/piconeo/in/trigger"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/piconeo/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/piconeo/in/trigger"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/piconeo/in/grip_click"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/piconeo/in/grip_click"
+            }
+          }
+        }
+      ],
+      "skeleton": [
+        {
+          "output": "/actions/piconeo/in/left_hand",
+          "path": "/user/hand/left/input/skeleton/left"
+        },
+        {
+          "output": "/actions/piconeo/in/right_hand",
+          "path": "/user/hand/right/input/skeleton/right"
+        }
+      ]
+    }
+  },
+  "controller_type": "pico_controller",
+  "description": "",
+  "name": "pico_controller"
+}

@@ -1,0 +1,693 @@
+{
+  "actions": [
+    {
+      "name": "/actions/Generic/in/Pose",
+      "type": "pose"
+    },
+    {
+      "name": "/actions/Generic/in/Strength",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/Generic/in/Axis",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/Generic/in/TouchingStrength",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/Generic/in/TouchingAxis",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/Generic/in/ActionPrimary",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/Generic/in/ActionSecondary",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/Generic/in/ActionGrab",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/Generic/in/ActionMenu",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/Generic/in/LeftHand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left"
+    },
+    {
+      "name": "/actions/Generic/in/RightHand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right"
+    },
+    {
+      "name": "/actions/Generic/in/UserPresent",
+      "type": "boolean",
+      "requirement": "suggested"
+    },
+    {
+      "name": "/actions/Generic/out/Haptic",
+      "type": "vibration"
+    },
+    {
+      "name": "/actions/Vive/in/trigger_hair",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/touchpad_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/touchpad_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/touchpad",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/grip",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/app",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/pose",
+      "type": "pose",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Vive/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/start",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/button_YB",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/button_XA",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/button_YB_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/button_XA_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/thumbrest_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/grip",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/grip_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/joystick",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/joystick_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/joystick_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/trigger_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/pose",
+      "type": "pose",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/OculusTouch/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left"
+    },
+    {
+      "name": "/actions/OculusTouch/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right"
+    },
+    {
+      "name": "/actions/OculusTouch/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/grip",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/app",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/trigger_hair",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/touchpad",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/touchpad_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/touchpad_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/joystick",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/pose",
+      "type": "pose",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/WindowsMR/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/grip",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/grip_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/button_A",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/button_B",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/button_A_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/button_B-touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/trigger_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/joystick",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/joystick_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/joystick_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/touchpad",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/touchpad_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/touchpad_press",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/pose",
+      "type": "pose",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/grip_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/touchpad_force",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Knuckles/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left"
+    },
+    {
+      "name": "/actions/Knuckles/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right",
+      "requirement": "suggested"
+    },
+    {
+      "name": "/actions/Knuckles/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/joystick",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/joystick_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/joystick_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/trigger_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/grip_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/menu",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/buttonAX",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/buttonBY",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/bumper",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/in/pose",
+      "type": "pose",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Cosmos/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/thumbstick",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/thumbstick_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/thumbstick_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/grip_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/app",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/system",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/buttonYB",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/buttonXA",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/in/pose",
+      "type": "pose",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/PicoNeo/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/appmenu",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/button_YB",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/button_XA",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/grip",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/grip_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/grip_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/joystick",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/joystick_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/pose",
+      "type": "pose"
+    },
+    {
+      "name": "/actions/HPReverb/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/HPReverb/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
+    }
+  ],
+  "action_sets": [
+    {
+      "name": "/actions/Generic",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/Vive",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/OculusTouch",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/WindowsMR",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/Knuckles",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/Cosmos",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/PicoNeo",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/HPReverb",
+      "usage": "single"
+    }
+  ],
+  "default_bindings": [
+    {
+      "controller_type": "vive_controller",
+      "binding_url": "bindings_vive_controller.json"
+    },
+    {
+      "controller_type": "oculus_touch",
+      "binding_url": "bindings_oculus_touch.json"
+    },
+    {
+      "controller_type": "knuckles",
+      "binding_url": "bindings_knuckles.json"
+    },
+    {
+      "controller_type": "holographic_controller",
+      "binding_url": "bindings_holographic_controller.json"
+    },
+    {
+      "controller_type": "vive_cosmos_controller",
+      "binding_url": "bindings_vive_cosmos_controller.json"
+    },
+    {
+      "controller_type": "hpmotioncontroller",
+      "binding_url": "bindings_mixedreality_hpcontroller.json"
+    },
+    {
+      "controller_type": "pico_controller",
+      "binding_url": "bindings_pico_controller.json"
+    },
+    {
+      "controller_type": "vive",
+      "binding_url": "binding_vive.json"
+    },
+    {
+      "controller_type": "indexhmd",
+      "binding_url": "binding_index_hmd.json"
+    },
+    {
+      "controller_type": "vive_pro",
+      "binding_url": "binding_vive_pro.json"
+    },
+    {
+      "controller_type": "rift",
+      "binding_url": "binding_rift.json"
+    },
+    {
+      "controller_type": "holographic_hmd",
+      "binding_url": "binding_holographic_hmd.json"
+    }
+  ],
+  "localization": [
+    {
+      "language_tag": "en_US"
+    }
+  ]
+}

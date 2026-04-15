@@ -1,0 +1,280 @@
+{
+   "alias_info" : {},
+   "app_key": "steam.app.2519830",
+   "bindings" : {
+      "/actions/generic" : {
+         "haptics" : [
+            {
+               "output" : "/actions/generic/out/haptic",
+               "path" : "/user/hand/left/output/haptic"
+            },
+            {
+               "output" : "/actions/generic/out/haptic",
+               "path" : "/user/hand/right/output/haptic"
+            }
+         ],
+         "poses" : [
+            {
+               "output" : "/actions/generic/in/pose",
+               "path" : "/user/hand/left/pose/raw"
+            },
+            {
+               "output" : "/actions/generic/in/pose",
+               "path" : "/user/hand/right/pose/raw"
+            }
+         ],
+         "sources" : [
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionprimary"
+                  },
+                  "pull" : {
+                     "output" : "/actions/generic/in/strength"
+                  },
+                  "touch" : {
+                     "output" : "/actions/generic/in/touchingstrength"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionprimary"
+                  },
+                  "pull" : {
+                     "output" : "/actions/generic/in/strength"
+                  },
+                  "touch" : {
+                     "output" : "/actions/generic/in/touchingstrength"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionsecondary"
+                  },
+                  "position" : {
+                     "output" : "/actions/generic/in/axis"
+                  },
+                  "touch" : {
+                     "output" : "/actions/generic/in/touchingaxis"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/left/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionsecondary"
+                  },
+                  "position" : {
+                     "output" : "/actions/generic/in/axis"
+                  },
+                  "touch" : {
+                     "output" : "/actions/generic/in/touchingaxis"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actiongrab"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actiongrab"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionmenu"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/application_menu"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionmenu"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/application_menu"
+            }
+         ]
+      },
+      "/actions/windowsmr" : {
+         "haptics" : [
+            {
+               "output" : "/actions/windowsmr/out/haptic",
+               "path" : "/user/hand/left/output/haptic"
+            },
+            {
+               "output" : "/actions/windowsmr/out/haptic",
+               "path" : "/user/hand/right/output/haptic"
+            }
+         ],
+         "poses" : [
+            {
+               "output" : "/actions/windowsmr/in/pose",
+               "path" : "/user/hand/left/pose/raw"
+            },
+            {
+               "output" : "/actions/windowsmr/in/pose",
+               "path" : "/user/hand/right/pose/raw"
+            }
+         ],
+         "sources" : [
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/trigger_click"
+                  },
+                  "pull" : {
+                     "output" : "/actions/windowsmr/in/trigger"
+                  },
+                  "touch" : {
+                     "output" : "/actions/windowsmr/in/trigger_hair"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/trigger_click"
+                  },
+                  "pull" : {
+                     "output" : "/actions/windowsmr/in/trigger"
+                  },
+                  "touch" : {
+                     "output" : "/actions/windowsmr/in/trigger_hair"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/touchpad_click"
+                  },
+                  "position" : {
+                     "output" : "/actions/windowsmr/in/touchpad"
+                  },
+                  "touch" : {
+                     "output" : "/actions/windowsmr/in/touchpad_touch"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/left/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/touchpad_click"
+                  },
+                  "position" : {
+                     "output" : "/actions/windowsmr/in/touchpad"
+                  },
+                  "touch" : {
+                     "output" : "/actions/windowsmr/in/touchpad_touch"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/grip"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/grip"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/app"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/application_menu"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/windowsmr/in/app"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/application_menu"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/windowsmr/in/joystick"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/left/input/joystick"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/windowsmr/in/joystick"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/right/input/joystick"
+            }
+         ],
+
+         "skeleton" : [
+            {
+               "output" : "/actions/windowsmr/in/right_hand",
+               "path" : "/user/hand/right/input/skeleton/right"
+            },
+            {
+               "output" : "/actions/windowsmr/in/left_hand",
+               "path" : "/user/hand/left/input/skeleton/left"
+            }
+         ]
+      }
+   },
+   "controller_type" : "holographic_controller",
+   "description" : "",
+   "name" : "windowsmr",
+   "options" : {},
+   "simulated_actions" : []
+}

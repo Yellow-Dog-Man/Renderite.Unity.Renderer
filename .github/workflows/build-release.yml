@@ -1,0 +1,54 @@
+name: 'Build and release the Unity Runtime'
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
+permissions:
+  packages: write
+  contents: write
+
+jobs:
+  build-runtime:
+    name: 'Build the Unity Runtime'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Check out repository'
+        uses: actions/checkout@v6
+        with:
+          lfs: 'true'
+          path: 'UnityRuntime'
+
+      - name: 'Install Unity'
+        uses: buildalon/unity-setup@v2
+        id: unity-setup
+        with:
+          unity-version: '2019.4.19f1'
+          modules: |
+            windows-mono
+          cache-installation: 'true'
+
+      - name: 'Activate Unity license'
+        uses: buildalon/activate-unity-license@v2
+        with:
+          license: 'personal'
+          username: '${{ secrets.UNITY_CI_USERNAME }}'
+          password: '${{ secrets.UNITY_CI_PASSWORD }}'
+
+      - name: 'Build Unity Runtime'
+        run: ${{ steps.unity-setup.outputs.unity-editor-path }} -quit -batchmode -nographics -projectPath UnityRuntime/ -buildTarget StandaloneWindows64 -executeMethod AppBuilder.BuildWindows
+
+      - name: 'zip artifacts'
+        if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+        run: zip -r renderer.zip Builds/Windows/Renderer
+
+      - name: 'Upload artifacts to Release'
+        uses: AButler/upload-release-assets@v3.0
+        if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+        with:
+          release-tag: '${{ github.ref_name }}'
+          files: 'renderer.zip'
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'

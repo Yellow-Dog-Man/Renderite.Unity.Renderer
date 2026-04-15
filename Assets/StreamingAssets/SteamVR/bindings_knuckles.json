@@ -1,0 +1,403 @@
+{
+  "app_key": "steam.app.2519830",
+  "bindings": {
+    "/actions/generic": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingstrength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingstrength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionmenu"
+            }
+          }
+        }
+      ],
+      "skeleton": []
+    },
+    "/actions/knuckles": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/knuckles/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/knuckles/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/knuckles/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/knuckles/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/knuckles/in/trigger"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/trigger_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/knuckles/in/trigger"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/trigger_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trackpad",
+          "mode": "trackpad",
+          "parameters": {},
+          "inputs": {
+            "position": {
+              "output": "/actions/knuckles/in/touchpad"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/touchpad_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trackpad",
+          "mode": "trackpad",
+          "parameters": {},
+          "inputs": {
+            "position": {
+              "output": "/actions/knuckles/in/touchpad"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/touchpad_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/joystick_click"
+            },
+            "position": {
+              "output": "/actions/knuckles/in/joystick"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/joystick_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/joystick_click"
+            },
+            "position": {
+              "output": "/actions/knuckles/in/joystick"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/joystick_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/button_a"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/button_a_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/button_a"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/button_a_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/b",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/button_b"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/button_b-touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/button_b"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/button_b-touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trackpad",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/touchpad_press"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trackpad",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/touchpad_press"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "force_sensor",
+          "parameters": {},
+          "inputs": {
+            "force": {
+              "output": "/actions/knuckles/in/grip"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "force_sensor",
+          "parameters": {},
+          "inputs": {
+            "force": {
+              "output": "/actions/knuckles/in/grip"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trackpad",
+          "mode": "force_sensor",
+          "parameters": {},
+          "inputs": {
+            "force": {
+              "output": "/actions/knuckles/in/touchpad_force"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trackpad",
+          "mode": "force_sensor",
+          "parameters": {},
+          "inputs": {
+            "force": {
+              "output": "/actions/knuckles/in/touchpad_force"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {
+            "click_activate_threshold": "0.3",
+            "click_deactivate_threshold": "0.25",
+            "force_input": "force",
+            "touch_activate_threshold": "0.01",
+            "touch_deactivate_threshold": "0"
+          },
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/grip_click"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/grip_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {
+            "click_activate_threshold": "0.3",
+            "click_deactivate_threshold": "0.25",
+            "force_input": "force",
+            "touch_activate_threshold": "0.01",
+            "touch_deactivate_threshold": "0"
+          },
+          "inputs": {
+            "click": {
+              "output": "/actions/knuckles/in/grip_click"
+            },
+            "touch": {
+              "output": "/actions/knuckles/in/grip_touch"
+            }
+          }
+        }
+      ],
+      "skeleton": [
+        {
+          "output": "/actions/knuckles/in/right_hand",
+          "path": "/user/hand/right/input/skeleton/right"
+        },
+        {
+          "output": "/actions/knuckles/in/left_hand",
+          "path": "/user/hand/left/input/skeleton/left"
+        }
+      ]
+    }
+  },
+  "controller_type": "knuckles",
+  "description": "Added skeleton",
+  "name": "Index Controller"
+}

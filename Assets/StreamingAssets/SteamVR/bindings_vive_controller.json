@@ -1,0 +1,278 @@
+{
+  "app_key": "steam.app.2519830",
+  "bindings": {
+    "/actions/generic": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/application_menu",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionmenu"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/application_menu",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionmenu"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trackpad",
+          "mode": "trackpad",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trackpad",
+          "mode": "trackpad",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        }
+      ],
+      "skeleton": [
+        {
+          "output": "/actions/generic/in/righthand",
+          "path": "/user/hand/left/input/skeleton/right"
+        },
+        {
+          "output": "/actions/generic/in/righthand",
+          "path": "/user/hand/right/input/skeleton/right"
+        }
+      ]
+    },
+    "/actions/vive": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/vive/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/vive/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/vive/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/vive/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/grip"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/grip"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/application_menu",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/app"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/application_menu",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/app"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/vive/in/trigger"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/vive/in/trigger"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trackpad",
+          "mode": "trackpad",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/touchpad_click"
+            },
+            "position": {
+              "output": "/actions/vive/in/touchpad"
+            },
+            "touch": {
+              "output": "/actions/vive/in/touchpad_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trackpad",
+          "mode": "trackpad",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/vive/in/touchpad_click"
+            },
+            "position": {
+              "output": "/actions/vive/in/touchpad"
+            },
+            "touch": {
+              "output": "/actions/vive/in/touchpad_touch"
+            }
+          }
+        }
+      ],
+      "skeleton": [
+        {
+          "output": "/actions/vive/in/right_hand",
+          "path": "/user/hand/right/input/skeleton/right"
+        },
+        {
+          "output": "/actions/vive/in/left_hand",
+          "path": "/user/hand/left/input/skeleton/left"
+        },
+        {
+          "output": "/actions/vive/in/right_hand",
+          "path": "/user/hand/left/input/skeleton/right"
+        }
+      ]
+    }
+  },
+  "controller_type": "vive_controller",
+  "description": "Added skeleton for both hands",
+  "name": "vive_controller"
+}

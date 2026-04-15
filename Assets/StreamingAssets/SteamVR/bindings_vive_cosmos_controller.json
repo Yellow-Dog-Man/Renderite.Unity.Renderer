@@ -1,0 +1,327 @@
+{
+  "app_key": "steam.app.2519830",
+  "bindings": {
+    "/actions/generic": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingstrength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingstrength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/y",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionmenu"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/y",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionmenu"
+            }
+          }
+        }
+      ],
+      "skeleton": []
+    },
+    "/actions/cosmos": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/cosmos/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/cosmos/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/cosmos/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/cosmos/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/cosmos/in/trigger"
+            },
+            "touch": {
+              "output": "/actions/cosmos/in/trigger_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/cosmos/in/trigger"
+            },
+            "touch": {
+              "output": "/actions/cosmos/in/trigger_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/joystick_click"
+            },
+            "position": {
+              "output": "/actions/cosmos/in/joystick"
+            },
+            "touch": {
+              "output": "/actions/cosmos/in/joystick_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/joystick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/joystick_click"
+            },
+            "position": {
+              "output": "/actions/cosmos/in/joystick"
+            },
+            "touch": {
+              "output": "/actions/cosmos/in/joystick_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/grip_click"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/grip_click"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/buttonax"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/buttonby"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/x",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/buttonax"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/y",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/buttonby"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/bumper",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/bumper"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/bumper",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/bumper"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/menu",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/cosmos/in/menu"
+            }
+          }
+        }
+      ],
+      "skeleton": [
+        {
+          "output": "/actions/cosmos/in/left_hand",
+          "path": "/user/hand/left/input/skeleton/left"
+        },
+        {
+          "output": "/actions/cosmos/in/right_hand",
+          "path": "/user/hand/right/input/skeleton/right"
+        }
+      ]
+    }
+  },
+  "controller_type": "vive_cosmos_controller",
+  "description": "",
+  "name": "vive_cosmos_controller"
+}

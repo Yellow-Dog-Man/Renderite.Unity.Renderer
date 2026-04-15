@@ -1,0 +1,110 @@
+{
+   "action_manifest_version" : 0,
+   "alias_info" : {},
+   "app_key": "steam.app.2519830",
+   "bindings" : {
+      "/actions/default" : {
+         "sources" : []
+      },
+      "/actions/generic" : {
+         "sources" : [
+            {
+               "inputs" : {
+                  "value" : {
+                     "output" : "/actions/generic/in/strength"
+                  }
+               },
+               "mode" : "scalar_constant",
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "value" : {
+                     "output" : "/actions/generic/in/strength"
+                  }
+               },
+               "mode" : "scalar_constant",
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionprimary"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionprimary"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actiongrab"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actiongrab"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionmenu"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/application_menu"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionmenu"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/application_menu"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionsecondary"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/thumb"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/generic/in/actionsecondary"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/thumb"
+            }
+         ]
+      }
+   },
+   "category" : "steamvr_input",
+   "controller_type" : "vive_tracker_handed",
+   "description" : "",
+   "name" : "Vive Tracker as Controller",
+   "options" : {},
+   "simulated_actions" : []
+}

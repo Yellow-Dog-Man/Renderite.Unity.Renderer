@@ -1,0 +1,101 @@
+#define GROUP_SIZE 256
+#define MAX_DIM_GROUPS 1024
+#define MAX_DIM_THREADS (GROUP_SIZE * MAX_DIM_GROUPS)
+
+#pragma kernel BitonicSort
+#pragma kernel PadBuffer
+#pragma kernel OverwriteAndTruncate
+#pragma kernel CopyBuffer
+
+int _Block;
+int _Dimension;
+uint _Count;
+uint _NextPowerOfTwo;
+bool _Reverse;
+
+RWStructuredBuffer<uint> _Keys;
+RWStructuredBuffer<uint> _Values;
+
+RWStructuredBuffer<uint> _ExternalValues;
+RWStructuredBuffer<uint> _ExternalKeys;
+
+// copy the original data into a new buffer which is the size of the next power of two.
+// populate the spare values with the highest or lowest value in the data, depending on whether
+// the sort is reversed or not
+[numthreads(GROUP_SIZE, 1, 1)]
+void PadBuffer(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _NextPowerOfTwo)
+        return;
+    
+    uint i = id.x;
+    
+    _Keys[i] = i;
+    
+    if (i >= _Count)
+        _Values[i] = _Reverse ? 0 : 2147483647;
+    else
+        _Values[i] = _ExternalValues[i];
+}
+
+// the actual bitonic merge sort
+[numthreads(GROUP_SIZE, 1, 1)]
+void BitonicSort(uint3 id : SV_DispatchThreadID)
+{
+    uint i = id.x + id.y * MAX_DIM_THREADS;
+    uint j = i ^ _Block;
+	
+    if (j < i) 
+        return;
+	
+    uint key_i = _Keys[i];
+    uint key_j = _Keys[j];
+    
+    int value_i = _Values[key_i];
+    int value_j = _Values[key_j];
+    
+    if (value_i == value_j)
+    {
+        // If the keys are the same, compare the actual indicies to ensure stable sort
+        value_i = key_i;
+        value_j = key_j;
+    }
+    
+    if (_Reverse)
+    {
+        value_i = -value_i;
+        value_j = -value_j;
+    }
+    
+    int diff = (value_i - value_j) * ((i & _Dimension) == 0 ? 1 : -1);
+    
+    if (diff > 0)
+    {
+        _Keys[i] = key_j;
+        _Keys[j] = key_i;
+    }
+}
+
+// finally, transfer the values in their new order back into the original buffer
+[numthreads(GROUP_SIZE, 1, 1)]
+void OverwriteAndTruncate(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _Count)
+        return;
+    
+    _ExternalKeys[id.x] = _Keys[id.x];
+}
+
+StructuredBuffer<int> _From;
+RWStructuredBuffer<int> _To;
+
+// helper kernel
+[numthreads(GROUP_SIZE, 1, 1)]
+void CopyBuffer(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _Count)
+        return;
+    
+    _To[id.x] = _From[id.x];
+}
+

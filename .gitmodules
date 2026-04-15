@@ -1,0 +1,3 @@
+[submodule "Assets/UniversalMediaPlayer"]
+	path = Assets/UniversalMediaPlayer
+	url = https://github.com/Yellow-Dog-Man/Renderite.Unity.Renderer.UMP.git
