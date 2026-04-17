@@ -62,7 +62,7 @@ jobs:
           submodules: ${{ github.event_name != 'pull_request' }}
 
       - name: 'Remove UMP Directory on external PR'
-        if: github.event_name == "pull_request"
+        if: github.event_name == 'pull_request'
         working-directory: 'UnityRuntime'
         run: rm -rf Assets/UniversalMediaPlayer
 
