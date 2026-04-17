@@ -30,6 +30,7 @@ jobs:
 
       - name: 'Generate a token'
         id: generate-token
+        if: github.event_name != 'pull_request'
         uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ secrets.CI_APP_ID }}
@@ -37,16 +38,33 @@ jobs:
           owner: ${{ github.repository_owner }}
 
       - name: 'Mask generated variable'
+        if: github.event_name != 'pull_request'
         shell: bash
         run: echo "::add-mask::${{ steps.generate-token.outputs.token }}"
+
+      - name: 'Determine token to use'
+        id: token-determination
+        run: |
+          TOKEN="${{ github.token }}"
+
+          if [[ "${{ github.event_name }}" != "pull_request" ]]; then
+            TOKEN="${{ steps.generate-token.outputs.token }}"
+          fi
+
+          echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: 'Check out repository'
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           lfs: 'true'
           path: 'UnityRuntime'
-          token: '${{ steps.generate-token.outputs.token }}'
-          submodules: 'true'
+          token: '${{ steps.token-determination.outputs.token }}'
+          submodules: '${{ github.event_name != "pull_request" }}'
+
+      - name: 'Remove UMP Directory on external PR'
+        if: github.event_name == "pull_request"
+        working-directory: 'UnityRuntime'
+        run: rm -rf Assets/UniversalMediaPlayer
 
       - name: 'Install Unity'
         uses: buildalon/unity-setup@ab626823a2d32033d5a7811169d0ce92e8010d38 # v2.3.0
