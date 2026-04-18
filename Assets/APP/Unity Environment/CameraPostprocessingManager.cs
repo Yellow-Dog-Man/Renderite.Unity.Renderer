@@ -141,11 +141,12 @@ public class CameraPostprocessingManager : MonoBehaviour
         _ao.Radius = 4;
         _ao.PowerExponent = 0.6f;
 
+        _ao.FilterEnabled = false;
+
         _ao.SampleCount = AmplifyOcclusion.SampleCountLevel.Low;
 
         if (!IsPrimary)
         {
-            _ao.FilterEnabled = false;
             _ao.BlurPasses = 4;
             _ao.BlurRadius = 4;
             _ao.BlurSharpness = 3;
