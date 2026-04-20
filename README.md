@@ -36,6 +36,19 @@ Making this repository open source has several goals:
 - SDK for building Resonite content with Unity
     - The Unity SDK is a completely separate project available here: https://github.com/Yellow-Dog-Man/Resonite.UnitySDK
 
+# Cloning the repo
+This repo has GitLFS files and thusly, requires Git LFS to be installed alongside the Git CLI. More info about GitLFS avalible here: https://git-lfs.com/
+
+- Git for Windows comes with Git LFS installed by default.
+- Linux 
+   - Arch; git-lfs is available in the extra repo:
+    `pacman -S git-lfs`
+   - Ubuntu/Debian:
+    `apt install git-lfs`
+   - Fedora/RHEL:
+    `dnf install git-lfs` 
+- Once Downloaded on Linux, run `git lfs install` in the terminal to finish the install.
+
 # Building
 Unity Version: Unity 2019.4f19
 
