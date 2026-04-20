@@ -141,11 +141,18 @@ public class CameraPostprocessingManager : MonoBehaviour
         _ao.Radius = 4;
         _ao.PowerExponent = 0.6f;
 
+        _ao.FilterEnabled = false;
+
+        // Enable distance fading to reduce unwanted flickering at long distances
+        _ao.FadeEnabled = true;
+
+        _ao.FadeStart = 16.0f;
+        _ao.FadeLength = 128.0f;
+
         _ao.SampleCount = AmplifyOcclusion.SampleCountLevel.Low;
 
         if (!IsPrimary)
         {
-            _ao.FilterEnabled = false;
             _ao.BlurPasses = 4;
             _ao.BlurRadius = 4;
             _ao.BlurSharpness = 3;
@@ -153,11 +160,8 @@ public class CameraPostprocessingManager : MonoBehaviour
         else
         {
             _ao.BlurPasses = 2;
-            _ao.BlurSharpness = 3;
             _ao.BlurRadius = 4;
-
-            _ao.FilterResponse = 0.9f;
-            _ao.FilterBlending = 0.25f;
+            _ao.BlurSharpness = 3;
         }
     }
 
