@@ -139,9 +139,7 @@ No, this is not possible. Most of our engine logic is in FrooxEngine that exists
 # What about Renderite.Shared.dll & Renderite.Unity.dll?
 A big part of the renderer logic resides in the Renderite.Shared & Renderite.Unity libraries. The source code of these is not part of this repository - this is only for the Unity-side.
 
-We plan to open source these as well as soon as possible in separate repositories - however, they first need to be separated from the rest of the solution, with some FrooxEngine assembly dependencies still to be resolved.
-
-Our goal is to open source the renderer in incremental steps, with this repo being the first one.
+You can find repository here: https://github.com/Yellow-Dog-Man/Renderite
 
 # Are there any parts missing from this repo?
 Yes. This repo is notably missing source for the UMP (UniversalMediaPlayer) playback engine. This is unfortunately a commercial package that we cannot re-distribute, even though it's likely abandonware at this point.
