@@ -28,6 +28,9 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Threading;
+using Renderite.Unity;
+using UnityEngine;
 
 namespace B83.Win32
 {
@@ -422,31 +425,43 @@ namespace B83.Win32
 
         private uint threadId = WinAPI.GetCurrentThreadId();
         private IntPtr mainWindow;
-        private HookProc m_Callback;
         private IntPtr m_Hook;
+        private const string unityClassName = "UnityWndClass";
+        
+        // SetWindowsHookEx doesn't have a variant with userdata,
+        // so we have to hack around it with a singleton to get the current class instance in the hook.
+        private static UnityWindowsExtensions m_Instance;
 
         public UnityWindowsExtensions()
         {
             if (threadId > 0)
-                mainWindow = GetMainWindow(threadId, "UnityWndClass");
+                mainWindow = GetMainWindow(threadId);
+            
+            if(m_Instance != null)
+                Debug.LogWarning("Created multiple UnityWindowsExtensions instances.");
+
+            m_Instance = this;
         }
 
-        public static IntPtr GetMainWindow(uint aThreadId, string aClassName = null)
+        public static unsafe IntPtr GetMainWindow(uint aThreadId)
         {
             IntPtr win = IntPtr.Zero;
-            Window.EnumThreadWindows(aThreadId, (W, _) => {
-                if (Window.IsWindowVisible(W) && (win == null || (aClassName != null && Window.GetClassName(W) == aClassName)))
-                    win = W;
-                return true;
-            }, IntPtr.Zero);
+            Window.EnumThreadWindows(aThreadId, MainWindowPredicate, (IntPtr)(&win));
             return win;
         }
-
+        
+        [MonoPInvokeCallback(typeof(EnumThreadDelegate))]
+        private static unsafe bool MainWindowPredicate(IntPtr w, IntPtr winPtr)
+        {
+            IntPtr* win = (IntPtr*)winPtr;
+            if (Window.IsWindowVisible(w) && (*win == null || (unityClassName != null && Window.GetClassName(w) == unityClassName))) *win = w;
+            return true;
+        }
+        
         public void InstallHook()
         {
             var hModule = WinAPI.GetModuleHandle(null);
-            m_Callback = Callback;
-            m_Hook = WinAPI.SetWindowsHookEx(HookType.WH_GETMESSAGE, m_Callback, hModule, threadId);
+            m_Hook = WinAPI.SetWindowsHookEx(HookType.WH_GETMESSAGE, Callback, hModule, threadId);
             // Allow dragging of files onto the main window. generates the WM_DROPFILES message
             WinAPI.DragAcceptFiles(mainWindow, true);
         }
@@ -470,7 +485,8 @@ namespace B83.Win32
             WinAPI.SetForegroundWindow(handle);
         }
 
-        private IntPtr Callback(int code, IntPtr wParam, ref MSG lParam)
+        [MonoPInvokeCallback(typeof(HookProc))]
+        private static IntPtr Callback(int code, IntPtr wParam, ref MSG lParam)
         {
             if (code == 0 && lParam.message == WM.DROPFILES)
             {
@@ -489,10 +505,10 @@ namespace B83.Win32
                     sb.Length = 0;
                 }
                 WinAPI.DragFinish(lParam.wParam);
-                if (OnDroppedFiles != null)
-                    OnDroppedFiles(result, pos);
+                if (m_Instance.OnDroppedFiles != null)
+                    m_Instance.OnDroppedFiles(result, pos);
             }
-            return WinAPI.CallNextHookEx(m_Hook, code, wParam, ref lParam);
+            return WinAPI.CallNextHookEx(m_Instance.m_Hook, code, wParam, ref lParam);
         }
 #else
         public void InstallHook()
