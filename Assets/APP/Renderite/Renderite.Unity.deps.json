@@ -488,7 +488,7 @@
           }
         }
       },
-      "YellowDogMan.Cloudtoid.Interprocess/1.0.8": {
+      "YellowDogMan.Cloudtoid.Interprocess/1.0.9": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.7",
           "Microsoft.Extensions.Logging": "9.0.0",
@@ -497,8 +497,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/YellowDogMan.Cloudtoid.Interprocess.dll": {
-            "assemblyVersion": "1.0.8.0",
-            "fileVersion": "1.0.8.0"
+            "assemblyVersion": "1.0.9.0",
+            "fileVersion": "1.0.9.0"
           }
         }
       },
@@ -554,7 +554,7 @@
         "dependencies": {
           "Enums.NET": "5.0.0",
           "System.Memory": "4.6.3",
-          "YellowDogMan.Cloudtoid.Interprocess": "1.0.8",
+          "YellowDogMan.Cloudtoid.Interprocess": "1.0.9",
           "YellowDogMan.Elements.Data": "1.0.0"
         },
         "runtime": {
@@ -958,12 +958,12 @@
       "path": "yellowdogman.cloudtoid.framework/1.0.4-ydm",
       "hashPath": "yellowdogman.cloudtoid.framework.1.0.4-ydm.nupkg.sha512"
     },
-    "YellowDogMan.Cloudtoid.Interprocess/1.0.8": {
+    "YellowDogMan.Cloudtoid.Interprocess/1.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9aQ8W+A7w567n1p420tsE+7mZkPdPnTQu+5ewTzpqVbzOMx6YNAMWcL052PIOi03QuW80aU84SNjTTwnf72cfg==",
-      "path": "yellowdogman.cloudtoid.interprocess/1.0.8",
-      "hashPath": "yellowdogman.cloudtoid.interprocess.1.0.8.nupkg.sha512"
+      "sha512": "sha512-7Ei11OjBWou9tDiDqIlGweQSkp8oMal1XIYLe9J2vrkAqANZyX7ceL/kZ/Dwp+J34Vk5OXMzvX69tDX5cPz4Jw==",
+      "path": "yellowdogman.cloudtoid.interprocess/1.0.9",
+      "hashPath": "yellowdogman.cloudtoid.interprocess.1.0.9.nupkg.sha512"
     },
     "YellowDogMan.CSCoreFork/1.2.1.2-ydm-0.1.17": {
       "type": "package",
