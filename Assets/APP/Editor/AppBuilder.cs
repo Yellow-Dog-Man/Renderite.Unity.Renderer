@@ -63,7 +63,7 @@ public class AppBuilder
     [MenuItem("Build/Windows (IL2CPP) - Master")]
     public static void BuildWindowsIL2CPP_Master()
     {
-        PlayerSettings.SetIl2CppCompilerConfiguration(BuildTargetGroup.Standalone, Il2CppCompilerConfiguration.Release);
+        PlayerSettings.SetIl2CppCompilerConfiguration(BuildTargetGroup.Standalone, Il2CppCompilerConfiguration.Master);
         BuildWindows(WindowsIL2CPP_Root, ScriptingImplementation.IL2CPP);
     }
 
