@@ -21,48 +21,38 @@ jobs:
     name: 'Build the Unity Runtime'
     runs-on: ubuntu-latest
 
-    steps:
-      - name: 'Checkout composite actions'
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          sparse-checkout: |
-            .github
+    environment: ${{ github.event.pull_request.head.repo.fork == 'true' && 'MR' || 'Production' }}
 
+    env:
+      IS_EXTERNAL: ${{ github.event.pull_request.head.repo.fork == 'true' }}
+
+    steps:
       - name: 'Generate a token'
         id: generate-token
-        if: github.event_name != 'pull_request'
+        if: ${{ env.IS_EXTERNAL != 'true' }}
         uses: actions/create-github-app-token@v2
         with:
-          app-id: ${{ secrets.CI_APP_ID }}
-          private-key: ${{ secrets.CI_PRIVATE_KEY }}
+          app-id: ${{ secrets.GH_APP_CLONE_TOKEN_ID }}
+          private-key: ${{ secrets.GH_APP_CLONE_TOKEN_SECRET }}
           owner: ${{ github.repository_owner }}
+          repositories:
+            Renderite.Unity.Renderer.UMP
 
       - name: 'Mask generated variable'
-        if: github.event_name != 'pull_request'
+        if: ${{ env.IS_EXTERNAL != 'true' }}
         shell: bash
         run: echo "::add-mask::${{ steps.generate-token.outputs.token }}"
-
-      - name: 'Determine token to use'
-        id: token-determination
-        run: |
-          TOKEN="${{ github.token }}"
-
-          if [[ "${{ github.event_name }}" != "pull_request" ]]; then
-            TOKEN="${{ steps.generate-token.outputs.token }}"
-          fi
-
-          echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: 'Check out repository'
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           lfs: 'true'
           path: 'UnityRuntime'
-          token: '${{ steps.token-determination.outputs.token }}'
+          token: ${{ env.IS_EXTERNAL == 'true' && github.token || steps.generate-token.outputs.token }}
           submodules: ${{ github.event_name != 'pull_request' }}
 
       - name: 'Remove UMP Directory on external PR'
-        if: github.event_name == 'pull_request'
+        if: ${{ env.IS_EXTERNAL == 'true' }}
         working-directory: 'UnityRuntime'
         run: rm -rf Assets/UniversalMediaPlayer
 

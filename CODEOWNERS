@@ -1,0 +1,7 @@
+# CODEOWNERS FILE
+
+# Basic repository rule
+*                       @Yellow-Dog-Man/Engineering
+
+# GitHub Actions-specific
+/.github/workflows/     @jae1911
