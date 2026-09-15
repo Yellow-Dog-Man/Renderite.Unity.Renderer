@@ -112,6 +112,9 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
 
     List<InvalidRoleDevice> invalidRoleControllers = new List<InvalidRoleDevice>();
 
+    // Every serial that ever registered as a controller this session, so swapped-out units never fall back to trackers.
+    readonly HashSet<string> knownControllerSerials = new HashSet<string>(StringComparer.Ordinal);
+
     Quaternion _touchRotationOffset = Quaternion.Euler(45, 0, 0);
     Vector3 _leftTouchOffset = new Vector3(-0.01f, 0.04f, 0.03f);
     Vector3 _rightTouchOffset = new Vector3(0.01f, 0.04f, 0.03f);
@@ -577,6 +580,11 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
 
     void RegisterController(int index, ETrackedControllerRole role, string renderModel, string uniqueId)
     {
+        RemoveTracker(uniqueId);
+
+        if (!string.IsNullOrWhiteSpace(uniqueId))
+            knownControllerSerials.Add(uniqueId);
+
         var system = OpenVR.System;
 
         var targetSide = (role == ETrackedControllerRole.LeftHand) ? Chirality.Left : Chirality.Right;
@@ -755,6 +763,53 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
 
             RightData = data;
         }
+
+        // Action bindings go stale across device swaps, so rebind on every activation.
+        ReactivateActionsFor(data);
+    }
+
+    void ReactivateActionsFor(SteamControllerData data)
+    {
+        if (data?.Controller == null)
+            return;
+
+        SteamVR_ActionSet set = null;
+
+        if (data.Controller is IndexControllerState)
+            set = SteamVR_Actions.Knuckles;
+        else if (data.Controller is ViveControllerState)
+            set = SteamVR_Actions.Vive;
+        else if (data.Controller is TouchControllerState || data.Controller is PicoNeo2ControllerState)
+            set = SteamVR_Actions.OculusTouch;
+        else if (data.Controller is CosmosControllerState)
+            set = SteamVR_Actions.Cosmos;
+        else if (data.Controller is HP_ReverbControllerState)
+            set = SteamVR_Actions.HPReverb;
+        else if (data.Controller is WindowsMR_ControllerState)
+            set = SteamVR_Actions.WindowsMR;
+
+        if (set == null)
+            return;
+
+        // Activate is a no-op when already active, so cycle off/on to force a rebind.
+        set.Deactivate(SteamVR_Input_Sources.Any);
+        set.Activate(SteamVR_Input_Sources.Any);
+    }
+
+    void RemoveTracker(string serial)
+    {
+        if (string.IsNullOrWhiteSpace(serial))
+            return;
+
+        lock (actionQueue)
+            actionQueue.Enqueue(() =>
+            {
+                if (trackers.TryGetValue(serial, out Tracker ghost))
+                {
+                    trackers.Remove(serial);
+                    inputManager.State.vr.trackers?.Remove(ghost.tracker);
+                }
+            });
     }
 
     float GetBatteryLevel(uint index)
@@ -835,6 +890,12 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
 
                     if (string.IsNullOrWhiteSpace(serial))
                         serial = GetSerialNumber(c.index);
+
+                    if (!string.IsNullOrWhiteSpace(serial) && knownControllerSerials.Contains(serial))
+                    {
+                        Debug.Log($"Skipping tracker fallback for controller serial {serial} at stale index {c.index}");
+                        continue;
+                    }
 
                     TrackerConnected(c.index, serial, null);
                 }
@@ -1438,7 +1499,7 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
         {
             if (controller is TouchControllerState touch && controller.isTracking && !DisableSkeletalModel)
                 touch.hasBoundHand = true;
-            
+
             hand.isTracking = false;
             return;
         }
