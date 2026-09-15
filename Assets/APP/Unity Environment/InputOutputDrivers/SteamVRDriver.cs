@@ -677,7 +677,7 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
         {
             controller = CreateController(uniqueId, renderModel, targetSide, bodyNode);
 
-            Debug.Log("Registering New Controller: " + controller);
+            Debug.Log("Registering New Controller: " + controller + " [" + XRInputGuard.Status() + "]");
 
             // Store the mapped controller in case it needs to be remapped later
             mappedControllers.Add(index, controller);

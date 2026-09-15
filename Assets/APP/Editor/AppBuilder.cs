@@ -11,6 +11,8 @@ public class AppBuilder
     public static string AssetsRoot => Application.dataPath;
     public static string BuildRoot => Path.Combine(Path.GetDirectoryName(Path.GetDirectoryName(AssetsRoot)), "Builds");
     public static string PatchTool => Path.Combine(Path.GetDirectoryName(AssetsRoot), "Patcher", "UnityApplicationPatcherCLI.exe");
+    public static string XRInputGuardDir => Path.Combine(Path.GetDirectoryName(AssetsRoot), "Native", "XRInputGuard");
+    public static string XRInputGuardDll => Path.Combine(AssetsRoot, "Plugins", "x86_64", "XRInputGuard.dll");
 
     public static string AppName => Renderite.Shared.Helper.PROCESS_NAME;
     public static string Subfolder => Renderite.Shared.Helper.FOLDER_PATH;
@@ -67,9 +69,56 @@ public class AppBuilder
         BuildWindows(WindowsIL2CPP_Root, ScriptingImplementation.IL2CPP);
     }
 
+    static bool RunCmake(string arguments)
+    {
+        var startInfo = new ProcessStartInfo("cmake");
+        startInfo.Arguments = arguments;
+
+        var process = Process.Start(startInfo);
+        process.WaitForExit();
+
+        return process.ExitCode == 0;
+    }
+
+    static bool BuildNativeGuard()
+    {
+        var src = Path.Combine(XRInputGuardDir, "XRInputGuard.c");
+
+        if (!File.Exists(src) || (File.Exists(XRInputGuardDll) && File.GetLastWriteTimeUtc(XRInputGuardDll) >= File.GetLastWriteTimeUtc(src)))
+        {
+            UnityEngine.Debug.Log("[XRInputGuard] DLL is up to date, skipping native build.");
+            return true;
+        }
+
+        UnityEngine.Debug.Log("[XRInputGuard] rebuilding native DLL.");
+
+        try
+        {
+            var buildDir = Path.Combine(XRInputGuardDir, "build");
+
+            if (!RunCmake($"-S \"{XRInputGuardDir}\" -B \"{buildDir}\"") ||
+                !RunCmake($"--build \"{buildDir}\" --config Release"))
+            {
+                UnityEngine.Debug.LogError("[XRInputGuard] native build failed (locked DLL? restart editor), aborting.");
+                return false;
+            }
+        }
+        catch
+        {
+            UnityEngine.Debug.LogWarning("[XRInputGuard] cmake unavailable, shipping checked-in DLL.");
+            return true;
+        }
+
+        AssetDatabase.Refresh();
+        return true;
+    }
+
     public static void BuildWindows(string path, ScriptingImplementation runtime)
     {
         UpdateVersionInfo();
+
+        if (!BuildNativeGuard())
+            return;
 
         var executable = Path.Combine(path, $"{AppName}.exe");
         var dataFolder = Path.Combine(path, $"{AppName}_Data");
