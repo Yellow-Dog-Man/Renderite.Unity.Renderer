@@ -80,7 +80,8 @@ public class AppBuilder
         return process.ExitCode == 0;
     }
 
-    static bool BuildNativeGuard()
+    [MenuItem("Build/XRInputGuard.dll")]
+    public static bool BuildNativeGuard()
     {
         var src = Path.Combine(XRInputGuardDir, "XRInputGuard.c");
 
