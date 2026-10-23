@@ -328,6 +328,19 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
                 }
                 break;
 
+            case FrameControllerState frame:
+                if (isLeft)
+                {
+                    SteamVR_Actions.Frame.left_hand.SetSkeletalTransformSpace(EVRSkeletalTransformSpace.Model);
+                    SteamVR_Actions.Frame.left_hand.SetRangeOfMotion(EVRSkeletalMotionRange.WithoutController);
+                }
+                else
+                {
+                    SteamVR_Actions.Frame.right_hand.SetSkeletalTransformSpace(EVRSkeletalTransformSpace.Model);
+                    SteamVR_Actions.Frame.right_hand.SetRangeOfMotion(EVRSkeletalMotionRange.WithoutController);
+                }
+                break;
+
             case ViveControllerState vive:
                 controller.hasBoundHand = DisableSkeletalModel;
 
@@ -497,6 +510,14 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
             var index = new IndexControllerState();
 
             controller = index;
+        }
+        else if(renderModel.Contains("frame"))
+        {
+            SteamVR_Actions.Frame.Activate(SteamVR_Input_Sources.Any);
+
+            var frame = new FrameControllerState();
+
+            controller = frame;
         }
         else if (renderModel.Contains("controller_vive"))
         {
@@ -777,6 +798,8 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
 
         if (data.Controller is IndexControllerState)
             set = SteamVR_Actions.Knuckles;
+        else if (data.Controller is FrameControllerState)
+            set = SteamVR_Actions.Frame;
         else if (data.Controller is ViveControllerState)
             set = SteamVR_Actions.Vive;
         else if (data.Controller is TouchControllerState || data.Controller is PicoNeo2ControllerState)
@@ -1255,6 +1278,10 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
                 UpdateController(index, fingerHand, source);
                 break;
 
+            case FrameControllerState frame:
+                UpdateController(frame, fingerHand, source);
+                break;
+
             case ViveControllerState vive:
                 UpdateController(vive, fingerHand, source);
                 break;
@@ -1322,6 +1349,47 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
 
         if (hand != null)
             UpdateHand(hand, controller, (hand.chirality == Chirality.Left) ? index.left_hand : index.right_hand);
+    }
+
+    void UpdateController(FrameControllerState controller, HandState hand, SteamVR_Input_Sources source)
+    {
+        var frame = SteamVR_Actions.Frame;
+
+        controller.grip = frame.grip.GetAxis(source);
+        controller.gripTouch = frame.grip_touch.GetState(source);
+        controller.gripClick = frame.grip_click.GetState(source);
+
+        controller.trigger = frame.trigger.GetAxis(source);
+        controller.triggerTouch = frame.trigger_touch.GetState(source);
+        controller.triggerClick = frame.trigger_click.GetState(source);
+
+        controller.thumbstickRaw = frame.thumbstick.GetAxis(source).ToRender();
+        controller.thumbstickTouch = frame.thumbstick_touch.GetState(source);
+        controller.thumbstickClick = frame.thumbstick_click.GetState(source);
+
+        controller.bumperTouch = frame.bumper_touch.GetState(source);
+        controller.bumperClick = frame.bumper_click.GetState(source);
+
+        controller.viewMenuTouch = frame.view_menu_touch.GetState(source);
+        controller.viewMenuClick = frame.view_menu_click.GetState(source);
+
+        controller.systemTouch = frame.system_touch.GetState(source);
+        controller.systemClick = frame.system_click.GetState(source);
+
+        controller.down_A_Touch = frame.button_a_down_touch.GetState(source);
+        controller.down_A_Click = frame.button_a_down_click.GetState(source);
+
+        controller.right_B_Touch = frame.button_b_right_touch.GetState(source);
+        controller.right_B_Click = frame.button_b_right_click.GetState(source);
+
+        controller.left_X_Touch = frame.button_x_left_touch.GetState(source);
+        controller.left_X_Click = frame.button_x_left_click.GetState(source);
+
+        controller.up_Y_Touch = frame.button_y_up_touch.GetState(source);
+        controller.up_Y_Click = frame.button_y_up_click.GetState(source);
+
+        if (hand != null)
+            UpdateHand(hand, controller, (hand.chirality == Chirality.Left) ? frame.left_hand : frame.right_hand);
     }
 
     void UpdateController(ViveControllerState controller, HandState hand, SteamVR_Input_Sources source)
