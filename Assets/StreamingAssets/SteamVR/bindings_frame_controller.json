@@ -209,6 +209,110 @@
           }
         },
         {
+          "path": "/user/hand/left/input/dpad_down",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_a_down_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_a_down_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_a_down_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_a_down_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/dpad_right",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_b_right_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_b_right_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_b_right_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_b_right_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/dpad_left",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_x_left_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_x_left_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/x",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_x_left_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_x_left_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/dpad_up",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_y_up_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_y_up_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/y",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_y_up_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_y_up_touch"
+            }
+          }
+        },
+        {
           "path": "/user/hand/left/input/view",
           "mode": "button",
           "parameters": {},
@@ -288,35 +392,12 @@
         },
         {
           "path": "/user/hand/left/input/grip",
-          "mode": "force_sensor",
+          "mode": "trigger",
           "parameters": {},
           "inputs": {
-            "force": {
+            "pull": {
               "output": "/actions/frame/in/grip"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/grip",
-          "mode": "force_sensor",
-          "parameters": {},
-          "inputs": {
-            "force": {
-              "output": "/actions/frame/in/grip"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/grip",
-          "mode": "button",
-          "parameters": {
-            "click_activate_threshold": "0.3",
-            "click_deactivate_threshold": "0.25",
-            "force_input": "force",
-            "touch_activate_threshold": "0.01",
-            "touch_deactivate_threshold": "0"
-          },
-          "inputs": {
+            },
             "click": {
               "output": "/actions/frame/in/grip_click"
             },
@@ -327,15 +408,12 @@
         },
         {
           "path": "/user/hand/right/input/grip",
-          "mode": "button",
-          "parameters": {
-            "click_activate_threshold": "0.3",
-            "click_deactivate_threshold": "0.25",
-            "force_input": "force",
-            "touch_activate_threshold": "0.01",
-            "touch_deactivate_threshold": "0"
-          },
+          "mode": "trigger",
+          "parameters": {},
           "inputs": {
+            "pull": {
+              "output": "/actions/frame/in/grip"
+            },
             "click": {
               "output": "/actions/frame/in/grip_click"
             },
@@ -361,3 +439,4 @@
   "description": "Steam Frame Controller",
   "name": "Steam Frame Controller"
 }
+
