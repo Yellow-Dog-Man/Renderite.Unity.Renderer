@@ -1,0 +1,442 @@
+{
+  "app_key": "steam.app.2519830",
+  "bindings": {
+    "/actions/generic": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/generic/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/generic/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingstrength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionprimary"
+            },
+            "pull": {
+              "output": "/actions/generic/in/strength"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingstrength"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionsecondary"
+            },
+            "position": {
+              "output": "/actions/generic/in/axis"
+            },
+            "touch": {
+              "output": "/actions/generic/in/touchingaxis"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actiongrab"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/generic/in/actionmenu"
+            }
+          }
+        }
+      ],
+      "skeleton": []
+    },
+    "/actions/frame": {
+      "chords": [],
+      "poses": [
+        {
+          "output": "/actions/frame/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/frame/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/frame/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/frame/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/frame/in/trigger"
+            },
+            "touch": {
+              "output": "/actions/frame/in/trigger_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/trigger_click"
+            },
+            "pull": {
+              "output": "/actions/frame/in/trigger"
+            },
+            "touch": {
+              "output": "/actions/frame/in/trigger_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/thumbstick_click"
+            },
+            "position": {
+              "output": "/actions/frame/in/thumbstick"
+            },
+            "touch": {
+              "output": "/actions/frame/in/thumbstick_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/thumbstick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/thumbstick_click"
+            },
+            "position": {
+              "output": "/actions/frame/in/thumbstick"
+            },
+            "touch": {
+              "output": "/actions/frame/in/thumbstick_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/dpad_down",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_a_down_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_a_down_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_a_down_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_a_down_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/dpad_right",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_b_right_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_b_right_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_b_right_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_b_right_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/dpad_left",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_x_left_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_x_left_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/x",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_x_left_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_x_left_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/dpad_up",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_y_up_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_y_up_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/y",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/button_y_up_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/button_y_up_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/view",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/view_menu_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/view_menu_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/menu",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/view_menu_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/view_menu_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/system",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/system_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/system_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/system",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/system_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/system_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/bumper",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/bumper_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/bumper_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/bumper",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/frame/in/bumper_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/bumper_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "pull": {
+              "output": "/actions/frame/in/grip"
+            },
+            "click": {
+              "output": "/actions/frame/in/grip_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/grip_touch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "pull": {
+              "output": "/actions/frame/in/grip"
+            },
+            "click": {
+              "output": "/actions/frame/in/grip_click"
+            },
+            "touch": {
+              "output": "/actions/frame/in/grip_touch"
+            }
+          }
+        }
+      ],
+      "skeleton": [
+        {
+          "output": "/actions/frame/in/right_hand",
+          "path": "/user/hand/right/input/skeleton/right"
+        },
+        {
+          "output": "/actions/frame/in/left_hand",
+          "path": "/user/hand/left/input/skeleton/left"
+        }
+      ]
+    }
+  },
+  "controller_type": "frame_controller",
+  "description": "Steam Frame Controller",
+  "name": "Steam Frame Controller"
+}
+

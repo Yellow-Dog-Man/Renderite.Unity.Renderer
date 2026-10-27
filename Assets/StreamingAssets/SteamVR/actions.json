@@ -599,6 +599,147 @@
       "name": "/actions/HPReverb/out/haptic",
       "type": "vibration",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/grip",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/grip_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/grip_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/trigger",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/trigger_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/trigger_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/thumbstick",
+      "type": "vector2",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/thumbstick_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/thumbstick_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_a_down_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_a_down_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_b_right_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_b_right_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_x_left_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_x_left_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_y_up_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/button_y_up_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/view_menu_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/view_menu_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/system_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/system_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/bumper_touch",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/bumper_click",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/pose",
+      "type": "pose",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/touchpad_force",
+      "type": "vector1",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/Frame/in/left_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/left"
+    },
+    {
+      "name": "/actions/Frame/in/right_hand",
+      "type": "skeleton",
+      "skeleton": "/skeleton/hand/right",
+      "requirement": "suggested"
+    },
+    {
+      "name": "/actions/Frame/out/haptic",
+      "type": "vibration",
+      "requirement": "optional"
     }
   ],
   "action_sets": [
@@ -632,6 +773,10 @@
     },
     {
       "name": "/actions/HPReverb",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/Frame",
       "usage": "single"
     }
   ],
@@ -683,6 +828,10 @@
     {
       "controller_type": "holographic_hmd",
       "binding_url": "binding_holographic_hmd.json"
+    },
+    {
+      "controller_type": "frame_controller",
+      "binding_url": "bindings_frame_controller.json"
     }
   ],
   "localization": [
