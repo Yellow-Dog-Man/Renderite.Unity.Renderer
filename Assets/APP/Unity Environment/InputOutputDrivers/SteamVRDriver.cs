@@ -1078,7 +1078,8 @@ public class SteamVRDriver : InputDriver, IDriverHeadDevice, IOutputDriver
 
         head.connectionType = isWireless ? HeadsetConnection.WirelessGeneral : HeadsetConnection.Wired;
 
-        if (string.Equals(serial, "VRLINKHMDQUESTPRO", StringComparison.OrdinalIgnoreCase))
+        if (string.Equals(serial, "VRLINKHMDQUESTPRO", StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(type, "frame_hmd", StringComparison.OrdinalIgnoreCase))
             head.connectionType = HeadsetConnection.WirelessSteamLink;
 
         head.headsetManufacturer = manufacturer;
