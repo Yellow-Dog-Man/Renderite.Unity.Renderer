@@ -11,14 +11,14 @@
         "dependencies": {
           "Enums.NET": "5.0.0",
           "Microsoft.Bcl.HashCode": "6.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "10.0.13",
-          "Microsoft.Extensions.Configuration.Binder": "10.0.13",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Configuration.Abstractions": "11.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "11.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "11.0.0",
           "SharpDX": "4.2.0",
           "SharpDX.DXGI": "4.2.0",
           "SharpDX.Direct3D11": "4.2.0",
           "System.Memory": "4.6.3",
-          "System.Threading.Tasks.Dataflow": "10.0.13",
+          "System.Threading.Tasks.Dataflow": "11.0.0",
           "YellowDogMan.CSCoreFork": "1.2.1.2-ydm-0.1.17",
           "YellowDogMan.Renderite.Shared": "1.0.0",
           "YellowDogMan.UnityNativeGraphicsProxy.NET": "0.2.1",
@@ -36,18 +36,20 @@
         "runtime": {
           "lib/netstandard2.0/Enums.NET.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
+            "fileVersion": "5.0.0.0",
+            "localPath": "Enums.NET.dll"
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/10.0.13": {
+      "Microsoft.Bcl.AsyncInterfaces/11.0.0": {
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.6.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "assemblyVersion": "10.0.0.13",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.Bcl.AsyncInterfaces.dll"
           }
         }
       },
@@ -55,121 +57,131 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bcl.HashCode.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.24.56208"
+            "fileVersion": "6.0.24.56208",
+            "localPath": "Microsoft.Bcl.HashCode.dll"
           }
         }
       },
-      "Microsoft.Extensions.Configuration/10.0.13": {
+      "Microsoft.Extensions.Configuration/11.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "10.0.13",
-          "Microsoft.Extensions.Primitives": "10.0.13"
+          "Microsoft.Extensions.Configuration.Abstractions": "11.0.0",
+          "Microsoft.Extensions.Primitives": "11.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.Extensions.Configuration.dll"
           }
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/10.0.13": {
+      "Microsoft.Extensions.Configuration.Abstractions/11.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "10.0.13"
+          "Microsoft.Extensions.Primitives": "11.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.Extensions.Configuration.Abstractions.dll"
           }
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/10.0.13": {
+      "Microsoft.Extensions.Configuration.Binder/11.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "10.0.13",
-          "Microsoft.Extensions.Configuration.Abstractions": "10.0.13"
+          "Microsoft.Extensions.Configuration": "11.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "11.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.Extensions.Configuration.Binder.dll"
           }
         }
       },
       "Microsoft.Extensions.DependencyInjection/9.0.0": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "10.0.13",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Bcl.AsyncInterfaces": "11.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "11.0.0",
           "System.Threading.Tasks.Extensions": "4.6.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "Microsoft.Extensions.DependencyInjection.dll"
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.13": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/11.0.0": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "10.0.13",
+          "Microsoft.Bcl.AsyncInterfaces": "11.0.0",
           "System.Threading.Tasks.Extensions": "4.6.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.Extensions.DependencyInjection.Abstractions.dll"
           }
         }
       },
       "Microsoft.Extensions.Logging/9.0.0": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "10.0.13",
+          "Microsoft.Bcl.AsyncInterfaces": "11.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Logging.Abstractions": "11.0.0",
           "Microsoft.Extensions.Options": "9.0.0",
-          "System.Diagnostics.DiagnosticSource": "10.0.13"
+          "System.Diagnostics.DiagnosticSource": "11.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "Microsoft.Extensions.Logging.dll"
           }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/10.0.13": {
+      "Microsoft.Extensions.Logging.Abstractions/11.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "11.0.0",
           "System.Buffers": "4.6.1",
-          "System.Diagnostics.DiagnosticSource": "10.0.13",
+          "System.Diagnostics.DiagnosticSource": "11.0.0",
           "System.Memory": "4.6.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.Extensions.Logging.Abstractions.dll"
           }
         }
       },
       "Microsoft.Extensions.Options/9.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
-          "Microsoft.Extensions.Primitives": "10.0.13",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "11.0.0",
+          "Microsoft.Extensions.Primitives": "11.0.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.24.52809",
+            "localPath": "Microsoft.Extensions.Options.dll"
           }
         }
       },
-      "Microsoft.Extensions.Primitives/10.0.13": {
+      "Microsoft.Extensions.Primitives/11.0.0": {
         "dependencies": {
           "System.Memory": "4.6.3",
           "System.Runtime.CompilerServices.Unsafe": "6.1.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.Extensions.Primitives.dll"
           }
         }
       },
@@ -177,7 +189,8 @@
         "runtime": {
           "lib/netstandard1.3/NLayer.dll": {
             "assemblyVersion": "1.14.0.0",
-            "fileVersion": "1.14.0.0"
+            "fileVersion": "1.14.0.0",
+            "localPath": "NLayer.dll"
           }
         }
       },
@@ -215,7 +228,8 @@
         "runtime": {
           "lib/netstandard1.1/SharpDX.dll": {
             "assemblyVersion": "4.2.0.0",
-            "fileVersion": "4.2.0.0"
+            "fileVersion": "4.2.0.0",
+            "localPath": "SharpDX.dll"
           }
         }
       },
@@ -227,7 +241,8 @@
         "runtime": {
           "lib/netstandard1.1/SharpDX.Direct3D11.dll": {
             "assemblyVersion": "4.2.0.0",
-            "fileVersion": "4.2.0.0"
+            "fileVersion": "4.2.0.0",
+            "localPath": "SharpDX.Direct3D11.dll"
           }
         }
       },
@@ -238,7 +253,8 @@
         "runtime": {
           "lib/netstandard1.1/SharpDX.DXGI.dll": {
             "assemblyVersion": "4.2.0.0",
-            "fileVersion": "4.2.0.0"
+            "fileVersion": "4.2.0.0",
+            "localPath": "SharpDX.DXGI.dll"
           }
         }
       },
@@ -246,7 +262,8 @@
         "runtime": {
           "lib/netstandard2.0/System.Buffers.dll": {
             "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.600.125.16908"
+            "fileVersion": "4.600.125.16908",
+            "localPath": "System.Buffers.dll"
           }
         }
       },
@@ -257,7 +274,8 @@
         "runtime": {
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {
             "assemblyVersion": "4.0.13.0",
-            "fileVersion": "4.6.24705.1"
+            "fileVersion": "4.6.24705.1",
+            "localPath": "System.Collections.Concurrent.dll"
           }
         }
       },
@@ -265,19 +283,21 @@
         "runtime": {
           "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {
             "assemblyVersion": "4.2.1.0",
-            "fileVersion": "4.6.26515.6"
+            "fileVersion": "4.6.26515.6",
+            "localPath": "System.ComponentModel.Annotations.dll"
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/10.0.13": {
+      "System.Diagnostics.DiagnosticSource/11.0.0": {
         "dependencies": {
           "System.Memory": "4.6.3",
           "System.Runtime.CompilerServices.Unsafe": "6.1.2"
         },
         "runtime": {
           "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "System.Diagnostics.DiagnosticSource.dll"
           }
         }
       },
@@ -286,7 +306,8 @@
         "runtime": {
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {
             "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
+            "fileVersion": "4.6.24705.1",
+            "localPath": "System.IO.FileSystem.Primitives.dll"
           }
         }
       },
@@ -294,7 +315,8 @@
         "runtime": {
           "lib/netstandard1.6/System.Linq.dll": {
             "assemblyVersion": "4.1.1.0",
-            "fileVersion": "4.6.24705.1"
+            "fileVersion": "4.6.24705.1",
+            "localPath": "System.Linq.dll"
           }
         }
       },
@@ -307,13 +329,14 @@
         "runtime": {
           "lib/netstandard2.0/System.Memory.dll": {
             "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.600.325.20307"
+            "fileVersion": "4.600.325.20307",
+            "localPath": "System.Memory.dll"
           }
         }
       },
       "System.Net.Http/4.3.4": {
         "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "10.0.13",
+          "System.Diagnostics.DiagnosticSource": "11.0.0",
           "System.Globalization.Extensions": "4.3.0",
           "System.Security.Cryptography.Algorithms": "4.3.1",
           "System.Security.Cryptography.Encoding": "4.3.0",
@@ -328,7 +351,8 @@
         "runtime": {
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {
             "assemblyVersion": "4.1.3.0",
-            "fileVersion": "4.600.125.16908"
+            "fileVersion": "4.600.125.16908",
+            "localPath": "System.Numerics.Vectors.dll"
           }
         }
       },
@@ -336,7 +360,8 @@
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.100.225.20307"
+            "fileVersion": "6.100.225.20307",
+            "localPath": "System.Runtime.CompilerServices.Unsafe.dll"
           }
         }
       },
@@ -344,7 +369,8 @@
         "runtime": {
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {
             "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
+            "fileVersion": "4.6.24705.1",
+            "localPath": "System.Runtime.Numerics.dll"
           }
         }
       },
@@ -391,7 +417,8 @@
         "runtime": {
           "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "1.0.24212.1"
+            "fileVersion": "1.0.24212.1",
+            "localPath": "System.Security.Cryptography.OpenSsl.dll"
           }
         }
       },
@@ -402,7 +429,8 @@
         "runtime": {
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {
             "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.6.24705.1"
+            "fileVersion": "4.6.24705.1",
+            "localPath": "System.Security.Cryptography.Primitives.dll"
           }
         }
       },
@@ -427,7 +455,8 @@
         "runtime": {
           "lib/netstandard1.6/System.Text.RegularExpressions.dll": {
             "assemblyVersion": "4.1.1.1",
-            "fileVersion": "4.6.27618.1"
+            "fileVersion": "4.6.27618.1",
+            "localPath": "System.Text.RegularExpressions.dll"
           }
         }
       },
@@ -435,15 +464,17 @@
         "runtime": {
           "lib/netstandard1.3/System.Threading.dll": {
             "assemblyVersion": "4.0.12.0",
-            "fileVersion": "4.6.24705.1"
+            "fileVersion": "4.6.24705.1",
+            "localPath": "System.Threading.dll"
           }
         }
       },
-      "System.Threading.Tasks.Dataflow/10.0.13": {
+      "System.Threading.Tasks.Dataflow/11.0.0": {
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "System.Threading.Tasks.Dataflow.dll"
           }
         }
       },
@@ -454,7 +485,8 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
             "assemblyVersion": "4.2.1.0",
-            "fileVersion": "4.600.325.20307"
+            "fileVersion": "4.600.325.20307",
+            "localPath": "System.Threading.Tasks.Extensions.dll"
           }
         }
       },
@@ -467,30 +499,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.ReaderWriter.dll": {
             "assemblyVersion": "4.1.0.0",
-            "fileVersion": "4.6.26011.1"
+            "fileVersion": "4.6.26011.1",
+            "localPath": "System.Xml.ReaderWriter.dll"
           }
         }
       },
       "YellowDogMan.Cloudtoid.Framework/1.0.4-ydm": {
         "dependencies": {
           "Microsoft.Bcl.HashCode": "6.0.0",
-          "Microsoft.Extensions.Configuration": "10.0.13",
-          "Microsoft.Extensions.Configuration.Binder": "10.0.13",
+          "Microsoft.Extensions.Configuration": "11.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "11.0.0",
           "Microsoft.Extensions.Logging": "9.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Logging.Abstractions": "11.0.0",
           "System.Linq": "4.3.0",
           "System.Net.Http": "4.3.4"
         },
         "runtime": {
           "lib/netstandard2.0/YellowDogMan.Cloudtoid.Framework.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": "1.0.0.0",
+            "localPath": "YellowDogMan.Cloudtoid.Framework.dll"
           }
         }
       },
       "YellowDogMan.Cloudtoid.Interprocess/1.0.9": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "11.0.0",
           "Microsoft.Extensions.Logging": "9.0.0",
           "System.Memory": "4.6.3",
           "YellowDogMan.Cloudtoid.Framework": "1.0.4-ydm"
@@ -498,7 +532,8 @@
         "runtime": {
           "lib/netstandard2.0/YellowDogMan.Cloudtoid.Interprocess.dll": {
             "assemblyVersion": "1.0.9.0",
-            "fileVersion": "1.0.9.0"
+            "fileVersion": "1.0.9.0",
+            "localPath": "YellowDogMan.Cloudtoid.Interprocess.dll"
           }
         }
       },
@@ -506,7 +541,7 @@
         "dependencies": {
           "NLayer": "1.14.0",
           "System.Buffers": "4.6.1",
-          "System.Diagnostics.DiagnosticSource": "10.0.13",
+          "System.Diagnostics.DiagnosticSource": "11.0.0",
           "System.Net.Http": "4.3.4",
           "System.Numerics.Vectors": "4.6.1",
           "System.Runtime.CompilerServices.Unsafe": "6.1.2",
@@ -519,7 +554,8 @@
         "runtime": {
           "lib/net462/CSCore.dll": {
             "assemblyVersion": "1.2.1.2",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "0.0.0.0",
+            "localPath": "CSCore.dll"
           }
         }
       },
@@ -527,7 +563,8 @@
         "runtime": {
           "lib/netstandard2.0/Elements.Data.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": "1.0.0.0",
+            "localPath": "Elements.Data.dll"
           }
         }
       },
@@ -538,7 +575,8 @@
         "runtime": {
           "lib/netstandard2.0/NVorbis.dll": {
             "assemblyVersion": "0.10.4.1",
-            "fileVersion": "0.10.4.1"
+            "fileVersion": "0.10.4.1",
+            "localPath": "NVorbis.dll"
           }
         }
       },
@@ -546,7 +584,8 @@
         "runtime": {
           "lib/netstandard2.0/NativeGraphics.NET.dll": {
             "assemblyVersion": "0.2.1.0",
-            "fileVersion": "0.2.1.0"
+            "fileVersion": "0.2.1.0",
+            "localPath": "NativeGraphics.NET.dll"
           }
         }
       },
@@ -587,12 +626,12 @@
       "path": "enums.net/5.0.0",
       "hashPath": "enums.net.5.0.0.nupkg.sha512"
     },
-    "Microsoft.Bcl.AsyncInterfaces/10.0.13": {
+    "Microsoft.Bcl.AsyncInterfaces/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PEC80XidOaP1vyHWiSIOHOfh6MpkFln/gkLXKaSmjrAdBSwcAaowvOaVBKvnb+HAb2UTGrZqROajIKMVFu2jdw==",
-      "path": "microsoft.bcl.asyncinterfaces/10.0.13",
-      "hashPath": "microsoft.bcl.asyncinterfaces.10.0.13.nupkg.sha512"
+      "sha512": "sha512-Uw3pD0oeX6kNS+pa8U9VaqUh3tcdQeY/cUILF89zDLeYgvfat0pzIi9kjK1nkA9u+3R7ZtAY9GsU1cgqVS+u4A==",
+      "path": "microsoft.bcl.asyncinterfaces/11.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.11.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.HashCode/6.0.0": {
       "type": "package",
@@ -601,26 +640,26 @@
       "path": "microsoft.bcl.hashcode/6.0.0",
       "hashPath": "microsoft.bcl.hashcode.6.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Configuration/10.0.13": {
+    "Microsoft.Extensions.Configuration/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-inhujYI/nikhmLxYI6ZEcaCgZ28ipJsKMPPxxr2XWf3vM0Q2P+E9R3hDHABZOLBxzD3gjpgcbSH/+hd2+gvI2A==",
-      "path": "microsoft.extensions.configuration/10.0.13",
-      "hashPath": "microsoft.extensions.configuration.10.0.13.nupkg.sha512"
+      "sha512": "sha512-VQS/GkFU9oLQmXZv0AR/zluF0YAbEAoUQ5aYMqcRc2TWeKa6m2AjInAOnDhCcoWI5a6LQUCzTcl8B3DZZaPZLg==",
+      "path": "microsoft.extensions.configuration/11.0.0",
+      "hashPath": "microsoft.extensions.configuration.11.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Configuration.Abstractions/10.0.13": {
+    "Microsoft.Extensions.Configuration.Abstractions/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DY4C2qzTt2lOIY3VoscBH/TCwTolI5DKOfgJLuI+k1QUvRNT5vTMS58AOerNiihdVRStO0wEpLeRWA8jytzHBQ==",
-      "path": "microsoft.extensions.configuration.abstractions/10.0.13",
-      "hashPath": "microsoft.extensions.configuration.abstractions.10.0.13.nupkg.sha512"
+      "sha512": "sha512-oyBSWnEsEi9SZTiwAfuKIdVIiEZ7TvNOtdFaGqyzF9WtomNV+uZHCqhQbnz/ipjtM50BYJ4s0MWbYafolq2mAg==",
+      "path": "microsoft.extensions.configuration.abstractions/11.0.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.11.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Configuration.Binder/10.0.13": {
+    "Microsoft.Extensions.Configuration.Binder/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yJJl/b0+W+GEWbu+7viw6C3h2BoNkB69Vlz7s/4e+hm4mYbJqfhdcDSi9sCXJw47blsBaiQd3UDPgDtop92+ug==",
-      "path": "microsoft.extensions.configuration.binder/10.0.13",
-      "hashPath": "microsoft.extensions.configuration.binder.10.0.13.nupkg.sha512"
+      "sha512": "sha512-3eoaKF4Stat1PSN+KFwqmy04sM9DwGuHM1o1lHwuNFM/TqwQ+PCIvaQHS4lcT3kJl5rwvDK4w/rIlR0wc024eQ==",
+      "path": "microsoft.extensions.configuration.binder/11.0.0",
+      "hashPath": "microsoft.extensions.configuration.binder.11.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/9.0.0": {
       "type": "package",
@@ -629,12 +668,12 @@
       "path": "microsoft.extensions.dependencyinjection/9.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.13": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-G2GrGWNAPZBsii2F6AU8n+JT2tC1/I0Ml/e9ZyNCgPjf3hZqronP7o0X91aAynCmVeae8KkSIUNXXeXCNRmdVQ==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.13",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.10.0.13.nupkg.sha512"
+      "sha512": "sha512-a2c4Kp55miXT6G+DSb75pczXQJHgNMzPyZEyMxrrKxuQrgvctcDWJWD9fVe/uGbQdu4Z0c3B7AVKp1DXmD64nQ==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/11.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.11.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/9.0.0": {
       "type": "package",
@@ -643,12 +682,12 @@
       "path": "microsoft.extensions.logging/9.0.0",
       "hashPath": "microsoft.extensions.logging.9.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Logging.Abstractions/10.0.13": {
+    "Microsoft.Extensions.Logging.Abstractions/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aSZEhEig4fvNiw2zs8Z6NyDlniKtq6YjcF3DyHuqTEHcZ2VKA/6itMPZ+dW+yWABWExlDcQwwdbqX1Rcb7W8WQ==",
-      "path": "microsoft.extensions.logging.abstractions/10.0.13",
-      "hashPath": "microsoft.extensions.logging.abstractions.10.0.13.nupkg.sha512"
+      "sha512": "sha512-MTMO2V1eT9Dm5VIpJGLNwIjAjoBErUlfuB+DEaZ0tb8J+Nf/Xlj8he5AztK9p1iOJPIyuBeOrVy2u/CSdsfzPw==",
+      "path": "microsoft.extensions.logging.abstractions/11.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.11.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Options/9.0.0": {
       "type": "package",
@@ -657,12 +696,12 @@
       "path": "microsoft.extensions.options/9.0.0",
       "hashPath": "microsoft.extensions.options.9.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Primitives/10.0.13": {
+    "Microsoft.Extensions.Primitives/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZjTwxzhiw2TMEzIbUDkMF0dfDB2I4NQgIfKD0ELu9/5Mk+SRGdKZcD0/lvBrRCAPo6KN2r0BW86MRancoyJkoA==",
-      "path": "microsoft.extensions.primitives/10.0.13",
-      "hashPath": "microsoft.extensions.primitives.10.0.13.nupkg.sha512"
+      "sha512": "sha512-HH2akbW2HeY/xeZJA5UceuQQX+1Pv/Kxrz/x4XPoH6wYDtgPIlBeOTZlQXlT+b50b1Ym/xfP+WJCX9FW4uLBXQ==",
+      "path": "microsoft.extensions.primitives/11.0.0",
+      "hashPath": "microsoft.extensions.primitives.11.0.0.nupkg.sha512"
     },
     "NLayer/1.14.0": {
       "type": "package",
@@ -804,12 +843,12 @@
       "path": "system.componentmodel.annotations/5.0.0",
       "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
-    "System.Diagnostics.DiagnosticSource/10.0.13": {
+    "System.Diagnostics.DiagnosticSource/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-M2pJpnFHrk43r1ukjr7yxVcoPwjGna7Vzt9731iaZjXdADXXIiW5MmMvR/2t4eoimuwICB2W4kLJjesCTB58FA==",
-      "path": "system.diagnostics.diagnosticsource/10.0.13",
-      "hashPath": "system.diagnostics.diagnosticsource.10.0.13.nupkg.sha512"
+      "sha512": "sha512-+boRR9uSKiIPtFeRLGwO5xylhDF80xpwM+dmk5jgIqqeUKLbujGkGICMTKqQrBzKO6fIp8BU8DV6YZkQukqo3A==",
+      "path": "system.diagnostics.diagnosticsource/11.0.0",
+      "hashPath": "system.diagnostics.diagnosticsource.11.0.0.nupkg.sha512"
     },
     "System.Globalization.Extensions/4.3.0": {
       "type": "package",
@@ -930,12 +969,12 @@
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
     },
-    "System.Threading.Tasks.Dataflow/10.0.13": {
+    "System.Threading.Tasks.Dataflow/11.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6kTOfviABZyTyNgr1EnL6bdjqj+nJH+t9gQFgAWyepyuK03DHyw14PRMW1nIcmfchd/WXjCUdL6lM+UlG9iSmg==",
-      "path": "system.threading.tasks.dataflow/10.0.13",
-      "hashPath": "system.threading.tasks.dataflow.10.0.13.nupkg.sha512"
+      "sha512": "sha512-q3Y81rKiEF6GrCa/Kzw7aKAR2rKw/A5+6jcoDM8qjWTHxXJafFTHEO30DTBL03X0EmBvJ067fnz5IXRSOd8hDg==",
+      "path": "system.threading.tasks.dataflow/11.0.0",
+      "hashPath": "system.threading.tasks.dataflow.11.0.0.nupkg.sha512"
     },
     "System.Threading.Tasks.Extensions/4.6.3": {
       "type": "package",
